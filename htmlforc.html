@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpooling App</title>
+    <link rel="stylesheet" href="cssforc.css">
+</head>
+<body>
+    <div id="landingPage" class="screen active">
+        <div class="container">
+            <h1>Welcome to Carpool Buddy</h1>
+            <button id="getStarted">Get Started</button>
+        </div>
+    </div>
+
+    <div id="loginScreen" class="screen">
+        <div class="container">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Enter your name" required>
+                <input type="password" id="password" placeholder="Enter your password" required> <!-- Added password field -->
+                <select id="userRole">
+                    <option value="driver">Driver</option>
+                    <option value="passenger">Passenger</option>
+                </select>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="driverScreen" class="screen">
+        <div class="container">
+            <button class="back-button">Back</button>
+            <h2>Driver Dashboard</h2>
+            <form id="driverForm">
+                <input type="text" id="vehicle" placeholder="Vehicle (Car/Bike)" required>
+                <input type="text" id="start" placeholder="Start City" required>
+                <input type="text" id="end" placeholder="End City" required>
+                <input type="time" id="time" required>
+                <input type="text" id="mobile" placeholder="Mobile Number" required>
+                <button type="submit">Add Route</button>
+            </form>
+            <ul id="driverRoutes"></ul>
+        </div>
+    </div>
+
+    <div id="passengerScreen" class="screen">
+        <div class="container">
+            <button class="back-button">Back</button>
+            <h2>Passenger Dashboard</h2>
+            <form id="searchForm">
+                <input type="text" id="searchStart" placeholder="Start City" required>
+                <input type="text" id="searchEnd" placeholder="End City" required>
+                <input type="time" id="searchTime" required>
+                <button type="submit">Search</button>
+            </form>
+            <ul id="availableRoutes"></ul>
+            <div id="rejectedMessage" class="rejected" style="display:none;">Route has been rejected.</div> <!-- Rejected message -->
+        </div>
+    </div>
+
+    <script src="scriptforc.js"></script>
+</body>
+</html>
